@@ -20,7 +20,7 @@ namespace Linkedin.Credentials
             }
 
             dynamic array = JsonConvert.DeserializeObject(json);
-            Console.WriteLine("Array::::" + array["email"]);
+            Console.WriteLine("Array:" + array["email"]);
             email = array["email"];
             password = array["password"];
         }

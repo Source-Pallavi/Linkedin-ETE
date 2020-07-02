@@ -1,6 +1,8 @@
-﻿using NUnit.Framework;
+﻿using Linkedin.ScreenShot;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
 
 namespace DemoProj
 {
@@ -8,7 +10,7 @@ namespace DemoProj
     public class LinkedIn
     {
         IWebDriver driver;
-        [OneTimeSetUp]        
+        [OneTimeSetUp]
         public void Initial()
         {
             driver = new ChromeDriver();
@@ -27,6 +29,8 @@ namespace DemoProj
         {
             HomePage page = new HomePage(driver);
             page.LogOut();
+
         }
+
     }
 }

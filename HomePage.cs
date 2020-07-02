@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Linkedin.ScreenShot;
+using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,10 @@ namespace DemoProj
 {
     public class HomePage
     {
-     
+        IWebDriver driver;
         public HomePage(IWebDriver driver)
         {
+            this.driver = driver;
             PageFactory.InitElements(driver, this);
         }
 
@@ -29,6 +31,8 @@ namespace DemoProj
             AccountSetting.Click();
             Thread.Sleep(5000);
             Logout.Click();
+            Ilistiner ilistiner = new Ilistiner(driver);
+            ilistiner.ScreenShot();
         }
 
 

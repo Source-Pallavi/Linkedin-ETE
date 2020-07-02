@@ -1,4 +1,5 @@
 ﻿using Linkedin.Credentials;
+using Linkedin.ScreenShot;
 using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
@@ -28,6 +29,8 @@ namespace DemoProj
             Userid.SendKeys(credentials.email);
             Password.SendKeys(credentials.password);
             SignIn.Click();
+            Ilistiner ilistiner = new Ilistiner(driver);
+            ilistiner.ScreenShot();
         }
     }
 }
